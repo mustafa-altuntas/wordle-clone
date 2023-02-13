@@ -5571,11 +5571,7 @@ const initApp = () => {
     "ZÜYUF",
   ];
 
-  const user_menu_button = document.getElementById("user-menu-button");
   const user_dropdown_menu = document.getElementById("user-dropdown-menu");
-  const mobile_menu_open = document.getElementById("mobile-menu-open");
-  const mobile_menu_close = document.getElementById("mobile-menu-close");
-  const mobile_menu = document.getElementById("mobile-menu");
   const guess = document.getElementById("guess");
 
   const defaultModal = document.getElementById("defaultModal");
@@ -5584,24 +5580,10 @@ const initApp = () => {
 
   const message = document.getElementById("message");
 
-  const toggleMenuOpen = () => {
-    mobile_menu_open.classList.toggle("hidden");
-    mobile_menu_open.classList.toggle("block");
-    mobile_menu_close.classList.toggle("hidden");
-    mobile_menu_close.classList.toggle("block");
 
-    mobile_menu.classList.toggle("block");
-    mobile_menu.classList.toggle("hidden");
-  };
 
-  const dropdawnMenuOpen = () => {
-    user_dropdown_menu.classList.toggle("block");
-    user_dropdown_menu.classList.toggle("hidden");
-  };
-  user_menu_button.addEventListener("click", dropdawnMenuOpen);
 
-  mobile_menu_open.addEventListener("click", toggleMenuOpen);
-  mobile_menu_close.addEventListener("click", toggleMenuOpen);
+ 
 
   // Oyun burada
   kelime = bütünKelimeler[Math.floor(Math.random() * 5563)];
