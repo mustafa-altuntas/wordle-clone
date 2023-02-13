@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../dist/output.css" />
+
+  <script src="./js/main.js" defer></script>
+  <!-- <script src="./js/turkce_kelime_listesi.js" ></script> -->
+</head>
+
+<body class="h-full">
+  <!--Mani Container-->
+  <!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+
+  <!--Modal Message -->
+    <div id="defaultModal" tabindex="-1" aria-hidden="true"
+      class="fixed justify-center mt-52 top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full hidden">
+      <div class="relative w-full h-full max-w-sm md:h-auto">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <!-- Modal body -->
+          <div class="p-2">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white text-center">
+              Message
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--   ///////  -->
+
+  <div class="min-h-full">
+
+
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+          Wordle
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="mx-auto max-w-7xl py-4 sm:px-6 lg:px-8">
+        <!-- Replace with your content -->
+        <div class="px-4 py-3 sm:px-0">
+          <div class="h-96 rounded-lg ">
+            <div id="message"
+              class="flex max-w-[300px] rounded-full opacity-100 mx-auto text-center text-sm font-medium bg-stone-700 text-white h-14 items-center justify-center">
+              Böyle bir kelime yok
+            </div>
+
+            <div class="mt-2 pt-5 w-full">
+              <div id="guess" class="flex flex-col items-center justify-center space-y-2">
+                <div id="guess-1" class="flex flex-row space-x-2">
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                </div>
+                <div id="guess-2" class="flex flex-row space-x-2">
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                </div>
+                <div id="guess-3" class="flex flex-row space-x-2">
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                </div>
+                <div id="guess-4" class="flex flex-row space-x-2">
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                </div>
+                <div id="guess-5" class="flex flex-row space-x-2">
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                  <div class="h-12 w-12 border-2 text-center text-4xl font-medium"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /End replace -->
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>
