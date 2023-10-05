@@ -5699,7 +5699,7 @@ const initApp = () => {
 
           return;
         }else{
-          if (bütünKelimeler.indexOf(tahmin) < 0) {
+          if (isValidCharacter(karakter) && bütünKelimeler.indexOf(tahmin) < 0) {
             mesajModalShow("Bu kelime yok!!");
             console.log("Burada 1234");
             return;
