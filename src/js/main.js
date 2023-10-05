@@ -5695,7 +5695,7 @@ const initApp = () => {
         }else{
           if (bütünKelimeler.indexOf(tahmin) < 0) {
             mesajModalShow("Bu kelime yok!!");
-            console.log("Burada 123");
+            console.log("Burada 1234");
             return;
           }
           if (tahmin === kelime) {
