@@ -2,6 +2,7 @@ let guessArray = [];
 let guessOrder = 0;
 let kelime = "tarih".toLocaleUpperCase("TR");
 let oyunAcikmi = true;
+let tahminSayisi = 0;
 
 const initApp = () => {
   const bütünKelimeler = [
@@ -5649,7 +5650,10 @@ const initApp = () => {
       mesajModalShow(kelime+" Kelimesini doğru tahmin ettin.<br> Tebrikler Kazandın :)",0);
       return;
     }
-    mesajModalShow("Kaybettin :( <br> Üzülme birdahaki sefer kazanacaksın.",0);
+    if(tahminSayisi>=5 && !kazandi){
+      mesajModalShow("Kaybettin :( <br> Üzülme birdahaki sefer kazanacaksın.",0);
+
+    }
   };
   //////// Oyun Bitti son
 
