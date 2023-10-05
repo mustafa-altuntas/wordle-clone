@@ -5694,12 +5694,12 @@ const initApp = () => {
   }
     if (oyunAcikmi) {
       if (key === "Enter") {
-        if (isValidCharacter(karakter) && tahmin.length < 5) {
+        if (isValidCharacter(tahmin) && tahmin.length < 5) {
           mesajModalShow("YETERSİZ HARF");
 
           return;
         }else{
-          if (isValidCharacter(karakter) && bütünKelimeler.indexOf(tahmin) < 0) {
+          if (isValidCharacter(tahmin) && bütünKelimeler.indexOf(tahmin) < 0) {
             mesajModalShow("Bu kelime yok!!");
             console.log("Burada 1234");
             return;
@@ -5734,7 +5734,7 @@ const initApp = () => {
         }
       } else {
         key = key.toLocaleUpperCase("TR");
-        if (isValidCharacter(karakter) && tahmin.length < 5) {
+        if (isValidCharacter(tahmin) && tahmin.length < 5) {
           tahmin = tahmin + key;
           for (let i = 0; i < tahmin.length; i++) {
             guessArray[guessOrder][1].children[i].innerText = tahmin[i];
