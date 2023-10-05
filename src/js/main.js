@@ -5734,7 +5734,7 @@ const initApp = () => {
         }
       } else {
         key = key.toLocaleUpperCase("TR");
-        if (tahmin.length < 5) {
+        if (isValidCharacter(karakter) && tahmin.length < 5) {
           tahmin = tahmin + key;
           for (let i = 0; i < tahmin.length; i++) {
             guessArray[guessOrder][1].children[i].innerText = tahmin[i];
