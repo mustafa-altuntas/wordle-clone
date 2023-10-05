@@ -5686,9 +5686,15 @@ const initApp = () => {
 
   function keyDownTextField(e) {
     var key = e.key;
+    function isValidCharacter(char) {
+      if (char.length != 1) {
+          return false;
+      }
+      return /[a-zA-ZğüşıöçĞÜŞİÖÇ]/.test(char);
+  }
     if (oyunAcikmi) {
       if (key === "Enter") {
-        if (tahmin.length < 5) {
+        if (isValidCharacter(karakter) && tahmin.length < 5) {
           mesajModalShow("YETERSİZ HARF");
 
           return;
