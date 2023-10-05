@@ -3,6 +3,7 @@ let guessOrder = 0;
 let kelime = "tarih".toLocaleUpperCase("TR");
 let oyunAcikmi = true;
 let tahminSayisi = 0;
+let tahmin1 = "";
 
 const initApp = () => {
   const bütünKelimeler = [
@@ -5645,6 +5646,7 @@ const initApp = () => {
 
   //////// Oyun Bitti
   const oyunBitti = (kazandi=false) => {
+    
     tahminKontrol();
     if(kazandi){
       mesajModalShow(kelime+" Kelimesini doğru tahmin ettin.<br> Tebrikler Kazandın :)",0);
@@ -5660,9 +5662,10 @@ const initApp = () => {
 
   //////////// Hata mesajı fonksiyonu
   const mesajModalShow = (gameMessage="",ekrandaKalmaSuresi=2000) => {
-    if (tahmin.length <= 5 & (tahmin!=kelime)) {
-      guessArray[guessOrder][1].classList.toggle("animate-shake-hand");
-    }
+    
+    // if (kelime.length <= 5 & (tahmin1!=kelime)) {
+    //   guessArray[guessOrder][1].classList.toggle("animate-shake-hand");
+    // }
     if (bütünKelimeler.indexOf(tahmin) < 0) {
       message.innerHTML = gameMessage;
 
@@ -5685,7 +5688,9 @@ const initApp = () => {
   //////////// Hata mesajı fonksiyonu son
 
   function keyDownTextField(e) {
+    
     var key = e.key;
+    tahmin1 = key;
     function isValidCharacter(char) {
       if (char.length != 1) {
           return false;
@@ -5694,12 +5699,12 @@ const initApp = () => {
   }
     if (oyunAcikmi) {
       if (key === "Enter") {
-        if (isValidCharacter(tahmin) && tahmin.length < 5) {
+        if (tahmin.length < 5) {
           mesajModalShow("YETERSİZ HARF");
 
           return;
         }else{
-          if (isValidCharacter(tahmin) && bütünKelimeler.indexOf(tahmin) < 0) {
+          if (isValidCharacter(key) && bütünKelimeler.indexOf(tahmin) < 0) {
             mesajModalShow("Bu kelime yok!!");
             console.log("Burada 1234");
             return;
@@ -5734,7 +5739,7 @@ const initApp = () => {
         }
       } else {
         key = key.toLocaleUpperCase("TR");
-        if (isValidCharacter(tahmin) && tahmin.length < 5) {
+        if (isValidCharacter(key) && tahmin.length < 5) {
           tahmin = tahmin + key;
           for (let i = 0; i < tahmin.length; i++) {
             guessArray[guessOrder][1].children[i].innerText = tahmin[i];
